@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        
+        <!-- Form Section -->
+        <div class="form-section">
+            <input type="text" id="task-title" placeholder="Title" />
+            <select id="task-day">
+                <option value="today">Today</option>
+                <option value="tomorrow">Tomorrow</option>
+            </select>
+            <input type="text" id="task-category" placeholder="Category" />
+            <input type="time" id="task-time" placeholder="Time" />
+            <button id="add-task-btn">I Got This</button>
+        </div>
+
+        <!-- Task Table -->
+        <div class="task-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Day</th>
+                        <th>Category</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4"><strong>Yesterday</strong></td>
+                    </tr>
+                    <tbody id="yesterday-tasks"></tbody>
+                    <tr>
+                        <td colspan="4"><strong>Today</strong></td>
+                    </tr>
+                    <tbody id="today-tasks"></tbody>
+                    <tr>
+                        <td colspan="4"><strong>Tomorrow</strong></td>
+                    </tr>
+                    <tbody id="tomorrow-tasks"></tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Button to Cycle Tasks -->
+        <button id="cycle-tasks-btn">Cycle Tasks</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
